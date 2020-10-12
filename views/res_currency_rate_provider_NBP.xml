@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2020 Myodoo.pl
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="res_currency_rate_provider_NBP_form_view">
+        <field name="name">res.currency.rate.provider.nbp.form</field>
+        <field name="model">res.currency.rate.provider</field>
+         <field name="inherit_id" ref="currency_rate_update.res_currency_rate_provider_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='options']"
+                   position="inside">
+                <group>
+                    <field name="service"/>
+                    <field name="currency_name" invisible="1"/>
+                    <div attrs="{'invisible':['|',('service','!=','NBP'),('currency_name','=','PLN')]}"
+                         class="alert alert-warning" colspan="2" role="alert">
+                        You are using <strong>Narodowy Bank Polski</strong> exchange rate service with a base
+                        currency different from <strong>PLN</strong>
+                        <br/>
+                        As long as the Narodowy Bank Polski only provides exchange rates based on PLN, other
+                        foreign currency rates are recalculated and might differ from real rates.
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    </data>
+
+</odoo>

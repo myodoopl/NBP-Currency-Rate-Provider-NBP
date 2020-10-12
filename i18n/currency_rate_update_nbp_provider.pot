@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* currency_rate_update_nbp_provider
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-11 13:17+0000\n"
+"PO-Revision-Date: 2020-09-11 13:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:223
+#, python-format
+msgid "Bad format of request in NBP Currency Rate Provider"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: model:ir.model,name:currency_rate_update_nbp_provider.model_res_currency_rate_provider
+msgid "Currency Rates Provider"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: selection:res.currency.rate.provider,service:0
+msgid "European Central Bank"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:217
+#, python-format
+msgid "Limit of 93 days has been exceeded in NBP Currency Rate Provider %s - %s"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: selection:res.currency.rate.provider,service:0
+msgid "National Bank of Poland"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:209
+#, python-format
+msgid "No data for given time range in NBP Currency Rate Provider"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: model:ir.model.fields,field_description:currency_rate_update_nbp_provider.field_res_currency_rate_provider__service
+msgid "Source Service"
+msgstr ""
+
+#. module: currency_rate_update_nbp_provider
+#: model_terms:ir.ui.view,arch_db:currency_rate_update_nbp_provider.res_currency_rate_provider_NBP_form_view
+msgid "You are using <strong>Narodowy Bank Polski</strong> exchange rate service with a base\n"
+"                        currency different from <strong>PLN</strong>\n"
+"                        <br/>\n"
+"                        As long as the Narodowy Bank Polski only provides exchange rates based on PLN, other\n"
+"                        foreign currency rates are recalculated and might differ from real rates."
+msgstr ""
+
