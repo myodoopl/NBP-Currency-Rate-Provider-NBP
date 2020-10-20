@@ -27,7 +27,6 @@ class ResCurrencyRateProviderNBP(models.Model):
         selection_add=[('NBP', 'National Bank of Poland')],
     )
 
-    @api.multi
     def _get_supported_currencies(self):
         self.ensure_one()
         if self.service != 'NBP':
@@ -53,7 +52,6 @@ class ResCurrencyRateProviderNBP(models.Model):
                 'PLN'
             ]
 
-    @api.multi
     def _obtain_rates(self, base_currency, currencies, date_from, date_to):
         self.ensure_one()
         if self.service != 'NBP':
