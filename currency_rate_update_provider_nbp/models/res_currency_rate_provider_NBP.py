@@ -65,6 +65,8 @@ class ResCurrencyRateProviderNBP(models.Model):
 
         nbp_rate = NBPRatesHandler(currencies, date_from, date_to)
         nbp_calculated_tables = nbp_rate.json_request()
+        if nbp_calculated_tables == 0:
+            return {}
 
         if invert_calculation:
 
@@ -203,9 +205,7 @@ class NBPRatesHandler:
             # Handle Errors
             if r.status_code == 404:
                 _logger.warning('Error: %s - No data  for given time range' % r.text)
-                raise ValidationError(
-                    _('No data for given time range in NBP Currency Rate Provider')
-                )
+                return 0
             if r.status_code == 400:
                 _logger.error('Error: %s' % r.text)
                 if len(r.text) > 20:
