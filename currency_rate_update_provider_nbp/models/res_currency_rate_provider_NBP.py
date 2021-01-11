@@ -67,7 +67,8 @@ class ResCurrencyRateProviderNBP(models.Model):
 
         nbp_rate = NBPRatesHandler(currencies, date_from, date_to)
         nbp_calculated_tables = nbp_rate.json_request()
-
+        if nbp_calculated_tables == 0:
+            return {}
         if invert_calculation:
 
             for k in nbp_calculated_tables.keys():
@@ -205,23 +206,15 @@ class NBPRatesHandler:
             # Handle Errors
             if r.status_code == 404:
                 _logger.warning('Error: %s - No data  for given time range' % r.text)
-                raise ValidationError(
-                    _('No data for given time range in NBP Currency Rate Provider')
-                )
+                return 0
             if r.status_code == 400:
                 _logger.error('Error: %s' % r.text)
                 if len(r.text) > 20:
                     _logger.warning(
                         'Error: %s - Limit of 93 days has been exceeded in NBP Currency Rate Provider: %s ' % r.text % req_url)
-                    raise ValidationError(
-                        _('Limit of 93 days has been exceeded in NBP Currency Rate Provider %s - %s', req_url, )
-                    )
                 else:
                     _logger.warning(
                         'Error: %s - Bad format of request in NBP Currency Rate Provider: %s' % r.text % req_url)
-                    raise ValidationError(
-                        _('Bad format of request in NBP Currency Rate Provider')
-                    )
 
             # Handle JSON
             r_body = r.json()
@@ -235,3 +228,4 @@ class NBPRatesHandler:
                 self.content[dateq.isoformat()]['PLN'] = float(1.00)
             _logger.debug(self.content)
             return self.content
+
