@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* currency_rate_update_nbp_provider
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-11 13:17+0000\n"
+"PO-Revision-Date: 2020-09-14 08:59+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: \n"
+"Language: pl\n"
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:223
+#, python-format
+msgid "Bad format of request in NBP Currency Rate Provider"
+msgstr "Niewłaściwy format zapytania do NBP"
+
+#. module: currency_rate_update_nbp_provider
+#: model:ir.model,name:currency_rate_update_nbp_provider.model_res_currency_rate_provider
+msgid "Currency Rates Provider"
+msgstr "Dostawca Stawek Walut"
+
+#. module: currency_rate_update_nbp_provider
+#: selection:res.currency.rate.provider,service:0
+msgid "European Central Bank"
+msgstr "Europejski Bank Centralny"
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:217
+#, python-format
+msgid ""
+"Limit of 93 days has been exceeded in NBP Currency Rate Provider %s - %s"
+msgstr "Limit 93 dni został przekroczony %s - %s"
+
+#. module: currency_rate_update_nbp_provider
+#: selection:res.currency.rate.provider,service:0
+msgid "National Bank of Poland"
+msgstr "Narodowy Bank Polski"
+
+#. module: currency_rate_update_nbp_provider
+#: code:addons/currency_rate_update_nbp_provider/models/res_currency_rate_provider_NBP.py:209
+#, python-format
+msgid "No data for given time range in NBP Currency Rate Provider"
+msgstr "Brak danych dla zapytań z podanego okresu czasowego"
+
+#. module: currency_rate_update_nbp_provider
+#: model:ir.model.fields,field_description:currency_rate_update_nbp_provider.field_res_currency_rate_provider__service
+msgid "Source Service"
+msgstr "Usługa Źródłowa"
+
+#. module: currency_rate_update_nbp_provider
+#: model_terms:ir.ui.view,arch_db:currency_rate_update_nbp_provider.res_currency_rate_provider_NBP_form_view
+msgid ""
+"You are using <strong>Narodowy Bank Polski</strong> exchange rate service "
+"with a base\n"
+"                        currency different from <strong>PLN</strong>\n"
+"                        <br/>\n"
+"                        As long as the Narodowy Bank Polski only provides "
+"exchange rates based on PLN, other\n"
+"                        foreign currency rates are recalculated and might "
+"differ from real rates."
+msgstr ""
+"Używasz stawek walutowych z <strong>Narodowego Banku Polskiego</"
+"strong>z \n"
+" \n"
+"walutą domyślną inną niż <strong>PLN </strong>\n"
+"<br/>\n"
+"Tak długo jak Narodowy Bank Polski przelicza waluty bazując na walucie "
+"polskiej, inne \n"
+"waluty zagraniczne będą przeliczane na jej podstawie i mogą się różnić od "
+"stawek prawdziwych"
