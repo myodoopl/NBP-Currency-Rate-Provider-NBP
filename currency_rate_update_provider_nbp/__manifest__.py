@@ -3,7 +3,7 @@
 
 {
     'name': 'Currency Rate Update - NBP',
-    'version': '13.0.1.0.4',
+    'version': '13.0.1.0.5',
     'author':
         'myOdoo.pl',
     'website': 'https://myodoo.pl',
