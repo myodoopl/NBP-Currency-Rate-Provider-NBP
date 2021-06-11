@@ -3,7 +3,7 @@
 
 {
     'name': 'Currency Rate Update - NBP',
-    'version': '14.0.1.0.1',
+    'version': '14.0.1.0.2',
     'author':
         'myOdoo.pl',
     'website': 'https://myodoo.pl',
@@ -21,7 +21,8 @@
         'currency_rate_update'
     ],
     'data': [
-        'views/res_currency_rate_provider_NBP.xml'
+        'views/res_currency_rate_provider_NBP.xml',
+        'security/res_currency_rate_provider_nbp.xml'
     ],
     'images': ['static/description/banner.png'],
     'installable': True,

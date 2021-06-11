@@ -25,7 +25,7 @@ class ResCurrencyRateProviderNBP(models.Model):
 
     service = fields.Selection(
         selection_add=[('NBP', 'National Bank of Poland')],
-        ondelete={'NBP': 'cascade'}
+        ondelete={"NBP": "cascade"}
     )
 
     def _get_supported_currencies(self):

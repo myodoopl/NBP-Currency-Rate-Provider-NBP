@@ -2,7 +2,7 @@
 Currency Rate Update - NBP
 ==========================
 
-This module need `Currency Rate Update <https://apps.odoo.com/apps/modules/12.0/currency_rate_update/>`_ to work.
+This module need `Currency Rate Update <https://github.com/OCA/currency/tree/14.0>`_ to work.
 
 This module is responsible for provide National Bank of Poland (Narodowy Bank Polski) currency exchange rates .
 
@@ -29,7 +29,7 @@ To install this module, you need to:
 * search for "Currency Rate Update - NBP" in your addons
 * install the module
 
-The module depends on currency_rate_update module available on https://github.com/OCA/currency
+The module depends on currency_rate_update module available on https://github.com/OCA/currency/tree/14.0
 
 Usage
 =====
@@ -57,6 +57,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Dawid Prus
+* Krystian Zagdański
 
 Maintainers
 ~~~~~~~~~~~
