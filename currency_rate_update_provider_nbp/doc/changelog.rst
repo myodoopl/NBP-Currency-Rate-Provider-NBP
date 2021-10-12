@@ -1,3 +1,7 @@
+v1.0.3
+======
+* Invert rates
+
 v1.0.2
 ======
 * Add security/res_currency_rate_provider_nbp.xml

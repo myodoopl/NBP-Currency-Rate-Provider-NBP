@@ -58,9 +58,9 @@ class ResCurrencyRateProviderNBP(models.Model):
         if self.service != 'NBP':
             return super()._obtain_rates(base_currency, currencies, date_from,
                                          date_to)  # pragma: no cover
-        invert_calculation = False
+        invert_calculation = True
         if base_currency != 'PLN':
-            invert_calculation = True
+            invert_calculation = False
             if base_currency not in currencies:
                 currencies.append(base_currency)
 
